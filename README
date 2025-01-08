@@ -1,1 +1,8 @@
- ijuhju
+havi áramfogyasztás: 0-25000 kWh
+havi gázfogyasztás: 0-500 m³
+havi vízfogyasztás 0-500 m³
+közös költség: 6000-22000 Ft
+hiba: tájékoztató szöveg, javítás
+áramdíj: 14,2*min(input,1320)+15,08*max(0,input-1320)
+gázdíj: 85,06*min(input,149.91)+650.87*max(0,input-149.91)
+áramdíj: 85,06*min(input,149.91)+650.87*max(0,input-149.91) //placeholder
