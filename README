@@ -5,7 +5,7 @@ Csapat:
 
 havi áramfogyasztás: 0-25000 kWh
 havi gázfogyasztás: 0-500 m³
-havi vízfogyasztás 0-500 m³
+havi vízfogyasztás 0-30 m³
 közös költség: 6000-22000 Ft
 hiba: tájékoztató szöveg, javítás
 áramdíj: 14,2*min(input,1320)+15,08*max(0,input-1320)
