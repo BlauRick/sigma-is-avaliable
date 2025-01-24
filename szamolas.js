@@ -53,7 +53,7 @@ function szamolas() {
 
     osszEredmeny = koltsegInput + aramEredmeny + gazEredmeny + vizEredmeny;
 
-    document.getElementById("bruh").value = osszEredmeny;
+    document.getElementById("ossz_kiir").value = osszEredmeny;
 
 
 
