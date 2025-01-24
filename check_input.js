@@ -4,6 +4,8 @@
 // Returns true if input in incorrect
 // There should be a span (called tag + _err) to write errors to
 // Also enables and disables the button
+
+// aram = armanam, gaz = smokey, viz = placcs, penz = IRA
 function isInputCorrect(tag, min, max) {
     let num = document.getElementById(tag).value;
     if ("".match(num)) {
