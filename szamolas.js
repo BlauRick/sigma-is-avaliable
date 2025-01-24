@@ -68,7 +68,7 @@ var output_page = "<button onclick=\"load_input_page()\">back</button><br>";
 function load_output_page() {
     input_page = document.getElementById("body").innerHTML;
     output_page +=
-    "<table>" +
+    "<table id = \"zold\">" +
         "<tr>" +
             "<th></th>" +
             "<th>Egyéb díjak</th>" +
