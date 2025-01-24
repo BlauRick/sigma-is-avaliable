@@ -33,31 +33,31 @@ function isInputCorrect(tag, min, max) {
 function checkEverything() {
     let err = false;
     if (isInputCorrect("armanam", 0, 25000)) {
-        document.getElementById("armanam" + "_kiir").innerHTML = "";
-        document.getElementById("smokey" + "_kiir").innerHTML = "";
-        document.getElementById("placcs" + "_kiir").innerHTML = "";
-        document.getElementById("ossz" + "_kiir").innerHTML = "";
+        document.getElementById("armanam" + "_kiir").value = "";
+        document.getElementById("smokey" + "_kiir").value = "";
+        document.getElementById("placcs" + "_kiir").value = "";
+        document.getElementById("ossz" + "_kiir").value = " ";
         err = true;
     }
     if (isInputCorrect("smokey", 0, 500)) {
-        document.getElementById("armanam" + "_kiir").innerHTML = "";
-        document.getElementById("smokey" + "_kiir").innerHTML = "";
-        document.getElementById("placcs" + "_kiir").innerHTML = "";
-        document.getElementById("ossz" + "_kiir").innerHTML = "";
+        document.getElementById("armanam" + "_kiir").value = "";
+        document.getElementById("smokey" + "_kiir").value = " ";
+        document.getElementById("placcs" + "_kiir").value = "";
+        document.getElementById("ossz" + "_kiir").value = "";
         err = true;
     }
     if (isInputCorrect("placcs", 0, 20)) {
-        document.getElementById("armanam" + "_kiir").innerHTML = "";
-        document.getElementById("smokey" + "_kiir").innerHTML = "";
-        document.getElementById("placcs" + "_kiir").innerHTML = "";
-        document.getElementById("ossz" + "_kiir").innerHTML = "";
+        document.getElementById("armanam" + "_kiir").value = "";
+        document.getElementById("smokey" + "_kiir").value = "";
+        document.getElementById("placcs" + "_kiir").value = "";
+        document.getElementById("ossz" + "_kiir").value = "";
         err = true;
     }
     if (isInputCorrect("IRA", 6000, 22000)) {
-        document.getElementById("armanam" + "_kiir").innerHTML = "";
-        document.getElementById("smokey" + "_kiir").innerHTML = "";
-        document.getElementById("placcs" + "_kiir").innerHTML = "";
-        document.getElementById("ossz" + "_kiir").innerHTML = "";
+        document.getElementById("armanam" + "_kiir").value = "";
+        document.getElementById("smokey" + "_kiir").value = "";
+        document.getElementById("placcs" + "_kiir").value = "";
+        document.getElementById("ossz" + "_kiir").value = "";
         err = true;
     }
     if (!err) document.getElementById("detailed").disabled = false;
