@@ -79,7 +79,7 @@ function load_output_page() {
             "<th>Áram</th>" +
             "<td> - </td>" +
             "<td>" + aramDij + "Ft/kWh</td>" +
-            "<td>" + emAramDij + "Ft/kWh (\\>" + aramLimit +" kWh)</td>"+
+            "<td>" + emAramDij + "Ft/kWh (\>" + aramLimit +" kWh)</td>"+
             "<td>" + (aramDij*minimum(aramInput*12,aramLimit))/12 + " Ft</td>"+
             "<td>" + (emAramDij*maximum(0,aramInput*12-aramLimit))/12 + " Ft</td>"+
             "<td>" + aramEredmeny + " Ft</td>"+
@@ -87,7 +87,7 @@ function load_output_page() {
             "<th>Gáz</th>" +
             "<td> - </td>" +
             "<td>" + gazDij + "Ft/m³</td>" +
-            "<td>" + emGazDij + "Ft/m³ (\\>" + gazLimit +" m³)</td>"+
+            "<td>" + emGazDij + "Ft/m³ (\>" + gazLimit +" m³)</td>"+
             "<td>" + gazDij * minimum(gazInput, gazLimit) + " Ft</td>"+
             "<td>" + emGazDij * maximum(0, gazInput - gazLimit) + " Ft</td>"+
             "<td>" + gazEredmeny + " Ft</td>"+
@@ -96,7 +96,7 @@ function load_output_page() {
             "<th>Víz</th>" +
             "<td>Alapdíj: " + alVizDij + " Ft</td>" +
             "<td>" + vizDij+csDij + "Ft/m³</td>" +
-            "<td>" + emVizDij+csDij + "Ft/m³ (\\>" + vizLimit +" m³)</td>"+
+            "<td>" + emVizDij+csDij + "Ft/m³ (\>" + vizLimit +" m³)</td>"+
             "<td>" + (vizDij + csDij) * minimum(vizInput, vizLimit) + " Ft</td>"+
             "<td>" + (emVizDij + csDij) * maximum(0, vizInput - vizLimit) + " Ft</td>"+
             "<td>" + vizEredmeny + " Ft</td>"+
