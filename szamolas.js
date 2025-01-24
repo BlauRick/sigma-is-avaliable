@@ -54,8 +54,8 @@ function szamolas() {
     osszEredmeny = koltsegInput + aramEredmeny + gazEredmeny + vizEredmeny;
     
     document.getElementById("armanam_kiir").value = aramEredmeny;
-    document.getElementById("placcs_kiir").value = gazEredmeny;
-    document.getElementById("smokey_kiir").value = vizEredmeny;
+    document.getElementById("placcs_kiir").value = vizEredmeny;
+    document.getElementById("smokey_kiir").value = gazEredmeny;
     document.getElementById("ossz_kiir").value = osszEredmeny;
 
 
