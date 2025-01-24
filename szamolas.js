@@ -112,4 +112,5 @@ function load_output_page() {
 
 function load_input_page() {
     document.getElementById("body").innerHTML = input_page;
+    document.getElementById("detailed").disabled=true;
 }
