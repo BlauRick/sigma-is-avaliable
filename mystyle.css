@@ -74,6 +74,8 @@ table{
     position: relative;
     width: 50%;
     right: 25%;
+    justify-content: center;
+align-items:center;
     
 
 }
