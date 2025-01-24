@@ -9,20 +9,28 @@
 <script>
     
 </script>
-<body>
+<body id="body">
     
+    <div class="alignment">
     Fogyasztások:<br>
     Áram:<br>
-    <input type="text" id="armanam" ><br>
+    <input type="text" id="armanam" ><!--<input type="range" id="aranm" min="0" max="25000" onchange="oreo()" >--><br>
     Gáz:<br>
-    <input type="text" id="smokey" ><span id=""></span><br>
+    <input type="text" id="smokey" ><span id="smokey_err">hello</span><br>
     Víz:<br>
-    <input type="text" id="placcs" ><span id=""></span><br>
+    <input type="text" id="placcs" ><span id="placcs_err"></span><br>
     Közös költség:<br>
-    <input type="text" id="IRA" ><span id=""></span><br>
+    <input type="text" id="IRA" ><span id="IRA_err"></span><br><br>
 
-    <button>#1</button>
-    <button>#2</button>
+    <button id="count">#1 számolás</button><!--szamol egyezrű-->
+    <button id="detailed">#2 részletes kiírás</button><!--szamol detailed--><br>
+
+    &emsp; Áram díj kiírása:  &emsp;&ensp;   Gáz díj kiírása:  &ensp;&nbsp;&emsp;&ensp;  Víz díj kiírása:    &ensp;&nbsp;&ensp;&emsp;&ensp;   Teljes költség:<br>
+    <input type="text" id="armanam_kiir" readonly >
+    <input type="text" id="smokey_kiir" readonly >
+    <input type="text" id="placcs_kiir" readonly >
+    <input type="text" id="ossze_kiir" readonly >
+</div>
 
     
     
