@@ -31,28 +31,34 @@ function isInputCorrect(tag, min, max) {
 }
 
 function checkEverything() {
+    let err = false;
     if (isInputCorrect("armanam", 0, 25000)) {
         document.getElementById("armanam" + "_kiir").innerHTML = "";
         document.getElementById("smokey" + "_kiir").innerHTML = "";
         document.getElementById("placcs" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
+        err = true;
     }
     if (isInputCorrect("smokey", 0, 500)) {
         document.getElementById("armanam" + "_kiir").innerHTML = "";
         document.getElementById("smokey" + "_kiir").innerHTML = "";
         document.getElementById("placcs" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
+        err = true;
     }
     if (isInputCorrect("placcs", 0, 30)) {
         document.getElementById("armanam" + "_kiir").innerHTML = "";
         document.getElementById("smokey" + "_kiir").innerHTML = "";
         document.getElementById("placcs" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
+        err = true;
     }
-    if (isInputCorrect("penz", 6000, 22000)) {
+    if (isInputCorrect("IRA", 6000, 22000)) {
         document.getElementById("armanam" + "_kiir").innerHTML = "";
         document.getElementById("smokey" + "_kiir").innerHTML = "";
-        document.getElementById("viz" + "_kiir").innerHTML = "";
+        document.getElementById("placcs" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
+        err = true;
     }
+    return !err;
 }
