@@ -52,7 +52,10 @@ function szamolas() {
     vizEredmeny = alVizDij + (vizDij + csDij) * minimum(vizInput, vizLimit) + (emVizDij + csDij) * maximum(0, vizInput - vizLimit);
 
     osszEredmeny = koltsegInput + aramEredmeny + gazEredmeny + vizEredmeny;
-
+    
+    document.getElementById("armanam_kiir").value = aramEredmeny;
+    document.getElementById("placcs_kiir").value = gazEredmeny;
+    document.getElementById("smokey_kiir").value = vizEredmeny;
     document.getElementById("ossz_kiir").value = osszEredmeny;
 
 
