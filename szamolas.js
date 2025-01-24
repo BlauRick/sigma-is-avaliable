@@ -49,7 +49,7 @@ function szamolas() {
 
     aramEredmeny = (aramDij * minimum(aramInput * 12, aramLimit) + emAramDij * maximum(0, aramInput * 12 - aramLimit)) / 12;
     gazEredmeny = gazDij * minimum(gazInput, gazLimit) + emGazDij * maximum(0, gazInput - gazLimit);
-    vizEredmeny = alVizDij + (vizDij + csDij) * minimum(vizInput, vizLimit) + (emVizDij + csDij) * maximum(0, vizInput - vizLimit);
+    vizEredmeny = ((vizInput === 0) ? 0 : alVizDij) + (vizDij + csDij) * minimum(vizInput, vizLimit) + (emVizDij + csDij) * maximum(0, vizInput - vizLimit);
 
     osszEredmeny = koltsegInput + aramEredmeny + gazEredmeny + vizEredmeny;
     
