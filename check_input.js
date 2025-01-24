@@ -31,27 +31,27 @@ function isInputCorrect(tag, min, max) {
 }
 
 function checkEverything() {
-    if (isInputCorrect("aram", 0, 25000)) {
-        document.getElementById("aram" + "_kiir").innerHTML = "";
-        document.getElementById("gaz" + "_kiir").innerHTML = "";
-        document.getElementById("viz" + "_kiir").innerHTML = "";
+    if (isInputCorrect("armanam", 0, 25000)) {
+        document.getElementById("armanam" + "_kiir").innerHTML = "";
+        document.getElementById("smokey" + "_kiir").innerHTML = "";
+        document.getElementById("placcs" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
     }
-    if (isInputCorrect("gaz", 0, 500)) {
-        document.getElementById("aram" + "_kiir").innerHTML = "";
-        document.getElementById("gaz" + "_kiir").innerHTML = "";
-        document.getElementById("viz" + "_kiir").innerHTML = "";
+    if (isInputCorrect("smokey", 0, 500)) {
+        document.getElementById("armanam" + "_kiir").innerHTML = "";
+        document.getElementById("smokey" + "_kiir").innerHTML = "";
+        document.getElementById("placcs" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
     }
-    if (isInputCorrect("viz", 0, 30)) {
-        document.getElementById("aram" + "_kiir").innerHTML = "";
-        document.getElementById("gaz" + "_kiir").innerHTML = "";
-        document.getElementById("viz" + "_kiir").innerHTML = "";
+    if (isInputCorrect("placcs", 0, 30)) {
+        document.getElementById("armanam" + "_kiir").innerHTML = "";
+        document.getElementById("smokey" + "_kiir").innerHTML = "";
+        document.getElementById("placcs" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
     }
     if (isInputCorrect("penz", 6000, 22000)) {
-        document.getElementById("aram" + "_kiir").innerHTML = "";
-        document.getElementById("gaz" + "_kiir").innerHTML = "";
+        document.getElementById("armanam" + "_kiir").innerHTML = "";
+        document.getElementById("smokey" + "_kiir").innerHTML = "";
         document.getElementById("viz" + "_kiir").innerHTML = "";
         document.getElementById("ossz" + "_kiir").innerHTML = "";
     }
