@@ -1,3 +1,9 @@
+/*aram id =armanam
+viz id = placcs
+gaz id = smokey
+kozos koltseg id = IRA
+*/
+
 const aramDij = 14.2; //áram éves
 const emAramDij = 15.08;
 const aramLimit = 1320;
