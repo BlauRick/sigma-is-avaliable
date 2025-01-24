@@ -60,5 +60,6 @@ function checkEverything() {
         document.getElementById("ossz" + "_kiir").innerHTML = "";
         err = true;
     }
+    if (!err) document.getElementById("detailed_count").disabled = true;
     return !err;
 }
