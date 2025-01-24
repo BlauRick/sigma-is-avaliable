@@ -42,10 +42,10 @@ function maximum(n1, n2) {
 function szamolas() {
 
 
-    koltsegInput = 10000;
-    aramInput = 1500; //example values
-    vizInput = 21;
-    gazInput = 33;
+    koltsegInput = document.getElementById("IRA").value-0;
+    aramInput = document.getElementById("armanam").value-0;
+    vizInput = document.getElementById("placcs").value-0;
+    gazInput = document.getElementById("smokey").value-0;
 
     aramEredmeny = (aramDij * minimum(aramInput * 12, aramLimit) + emAramDij * maximum(0, aramInput * 12 - aramLimit)) / 12;
     gazEredmeny = gazDij * minimum(gazInput, gazLimit) + emGazDij * maximum(0, gazInput - gazLimit);
@@ -64,11 +64,11 @@ var output_page = "<button onclick=\"load_input_page()\">back</button><br>";
 
 function load_output_page() {
     input_page = document.getElementById("body").innerHTML;
-    output_page += output_page +=
+    output_page +=
     "<table>" +
         "<tr>" +
             "<th></th>" +
-            "<th>Alap díjak</th>" +
+            "<th>Egyéb díjak</th>" +
             "<th>Kedvezményes díjak</th>"+
             "<th>Emelt díjak</th>" +
             "<th>Alap Költség</th>" +
@@ -80,18 +80,30 @@ function load_output_page() {
             "<td> - </td>" +
             "<td>" + aramDij + "Ft/kWh</td>" +
             "<td>" + emAramDij + "Ft/kWh (\\>" + aramLimit +" kWh)</td>"+
-            "<td>" + (aramDij*minimum(aramInput*12,aramLimit))/12 + "</td>"+
-            "<td>" + (emAramDij*maximum(0,aramInput*12-aramLimit))/12 + "</td>"+
-            "<td>" + aramEredmeny + "</td>"+
+            "<td>" + (aramDij*minimum(aramInput*12,aramLimit))/12 + " Ft</td>"+
+            "<td>" + (emAramDij*maximum(0,aramInput*12-aramLimit))/12 + " Ft</td>"+
+            "<td>" + aramEredmeny + " Ft</td>"+
         "</tr>" +
-            "<th>Gáz/th>" +
+            "<th>Gáz</th>" +
             "<td> - </td>" +
             "<td>" + gazDij + "Ft/m³</td>" +
             "<td>" + emGazDij + "Ft/m³ (\\>" + gazLimit +" m³)</td>"+
-            "<td>" + gazDij * minimum(gazInput, gazLimit) + "</td>"+
-            "<td>" + emGazDij * maximum(0, gazInput - gazLimit) + "</td>"+
-            "<td>" + gazEredmeny + "</td>"+
-        "</tr>";
+            "<td>" + gazDij * minimum(gazInput, gazLimit) + " Ft</td>"+
+            "<td>" + emGazDij * maximum(0, gazInput - gazLimit) + " Ft</td>"+
+            "<td>" + gazEredmeny + " Ft</td>"+
+        "</tr>" +
+        "</tr>" +
+            "<th>Víz</th>" +
+            "<td>Alapdíj: " + alVizDij + " Ft</td>" +
+            "<td>" + vizDij+csDij + "Ft/m³</td>" +
+            "<td>" + emVizDij+csDij + "Ft/m³ (\\>" + vizLimit +" m³)</td>"+
+            "<td>" + (vizDij + csDij) * minimum(vizInput, vizLimit) + " Ft</td>"+
+            "<td>" + (emVizDij + csDij) * maximum(0, vizInput - vizLimit) + " Ft</td>"+
+            "<td>" + vizEredmeny + " Ft</td>"+
+        "</tr>" +
+    "</table><br>" + 
+    "Havi költség: " + koltsegInput + " Ft<br>" + 
+    "Teljes összeg: " + osszEredmeny + "Ft";
 
 
     document.getElementById("body").innerHTML = output_page;
