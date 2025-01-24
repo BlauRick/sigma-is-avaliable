@@ -77,7 +77,7 @@ table{
     text-align: left;
 
 }
-#zold{
+#zold, #zold th,#zold td,#zold tr{
     
     border: 1px solid;
 }
