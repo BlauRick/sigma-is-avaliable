@@ -79,5 +79,5 @@ table{
 }
 #zold, #zold th,#zold td,#zold tr{
     
-    border: 1px solid; border-collapse: collapse;
+    border: 1px solid; border-collapse: collapse;padding:4px;
 }
