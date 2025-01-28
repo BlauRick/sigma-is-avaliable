@@ -30,14 +30,6 @@ const koltsegUpper = 22000;
 var aramInput, vizInput, gazInput, koltsegInput, aramEredmeny, vizEredmeny, gazEredmeny, osszEredmeny;
 
 
-function minimum(n1, n2) {
-    if (n1 <= n2) { return n1; }
-    if (n1 > n2) { return n2; }
-}
-function maximum(n1, n2) {
-    if (n1 >= n2) { return n1; }
-    if (n1 < n2) { return n2; }
-}
 
 function szamolas() {
 
@@ -47,11 +39,16 @@ function szamolas() {
     vizInput = document.getElementById("placcs").value-0;
     gazInput = document.getElementById("smokey").value-0;
 
-    aramEredmeny = (aramDij * minimum(aramInput * 12, aramLimit) + emAramDij * maximum(0, aramInput * 12 - aramLimit)) / 12;
-    gazEredmeny = gazDij * minimum(gazInput, gazLimit) + emGazDij * maximum(0, gazInput - gazLimit);
-    vizEredmeny = ((vizInput === 0) ? 0 : alVizDij) + (vizDij + csDij) * minimum(vizInput, vizLimit) + (emVizDij + csDij) * maximum(0, vizInput - vizLimit);
+    aramEredmeny = (aramDij * Math.min(aramInput * 12, aramLimit) + emAramDij * Math.max(0, aramInput * 12 - aramLimit)) / 12;
+    gazEredmeny = gazDij * Math.min(gazInput, gazLimit) + emGazDij * Math.max(0, gazInput - gazLimit);
+    vizEredmeny = ((vizInput === 0) ? 0 : alVizDij) + (vizDij + csDij) * Math.min(vizInput, vizLimit) + (emVizDij + csDij) * Math.max(0, vizInput - vizLimit);
 
     osszEredmeny = koltsegInput + aramEredmeny + gazEredmeny + vizEredmeny;
+    
+    aramEredmeny = Math.round(aramEredmeny);
+    gazEredmeny = Math.round(gazEredmeny);
+    vizEredmeny = Math.round(vizEredmeny);
+    osszEredmeny = Math.round(osszEredmeny);
     
     document.getElementById("armanam_kiir").value = aramEredmeny;
     document.getElementById("placcs_kiir").value = vizEredmeny;
@@ -83,16 +80,16 @@ function load_output_page() {
             "<td> - </td>" +
             "<td>" + aramDij + "Ft/kWh</td>" +
             "<td>" + emAramDij + "Ft/kWh (\>" + aramLimit +" kWh)</td>"+
-            "<td>" + (aramDij*minimum(aramInput*12,aramLimit))/12 + " Ft</td>"+
-            "<td>" + (emAramDij*maximum(0,aramInput*12-aramLimit))/12 + " Ft</td>"+
+            "<td>" + (aramDij*Math.min(aramInput*12,aramLimit))/12 + " Ft</td>"+
+            "<td>" + (emAramDij*Math.max(0,aramInput*12-aramLimit))/12 + " Ft</td>"+
             "<td>" + aramEredmeny + " Ft</td>"+
         "</tr>" +
             "<th>Gáz</th>" +
             "<td> - </td>" +
             "<td>" + gazDij + "Ft/m³</td>" +
             "<td>" + emGazDij + "Ft/m³ (\>" + gazLimit +" m³)</td>"+
-            "<td>" + gazDij * minimum(gazInput, gazLimit) + " Ft</td>"+
-            "<td>" + emGazDij * maximum(0, gazInput - gazLimit) + " Ft</td>"+
+            "<td>" + gazDij * Math.min(gazInput, gazLimit) + " Ft</td>"+
+            "<td>" + emGazDij * Math.max(0, gazInput - gazLimit) + " Ft</td>"+
             "<td>" + gazEredmeny + " Ft</td>"+
         "</tr>" +
         "</tr>" +
@@ -100,8 +97,8 @@ function load_output_page() {
             "<td>Alapdíj: " + alVizDij + " Ft</td>" +
             "<td>" + vizDij+csDij + "Ft/m³</td>" +
             "<td>" + emVizDij+csDij + "Ft/m³ (\>" + vizLimit +" m³)</td>"+
-            "<td>" + (vizDij + csDij) * minimum(vizInput, vizLimit) + " Ft</td>"+
-            "<td>" + (emVizDij + csDij) * maximum(0, vizInput - vizLimit) + " Ft</td>"+
+            "<td>" + (vizDij + csDij) * Math.min(vizInput, vizLimit) + " Ft</td>"+
+            "<td>" + (emVizDij + csDij) * Math.max(0, vizInput - vizLimit) + " Ft</td>"+
             "<td>" + vizEredmeny + " Ft</td>"+
         "</tr>" +
     "</table><br>" + 
