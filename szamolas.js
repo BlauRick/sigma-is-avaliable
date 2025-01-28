@@ -115,5 +115,12 @@ function load_output_page() {
 
 function load_input_page() {
     document.getElementById("body").innerHTML = input_page;
-    document.getElementById("detailed").disabled=true;
+    document.getElementById("IRA").value = koltsegInput;
+    document.getElementById("armanam").value = aramInput;
+    document.getElementById("placcs").value = vizInput;
+    document.getElementById("smokey").value = gazInput;
+    document.getElementById("armanam_kiir").value = aramEredmeny;
+    document.getElementById("placcs_kiir").value = vizEredmeny;
+    document.getElementById("smokey_kiir").value = gazEredmeny;
+    document.getElementById("ossz_kiir").value = osszEredmeny;
 }
