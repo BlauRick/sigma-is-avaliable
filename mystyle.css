@@ -81,3 +81,9 @@ table{
     
     border: 1px solid; border-collapse: collapse;padding:4px;
 }
+
+table input{
+    background-color: aquamarine;
+    width: 75%;/*
+
+*/}
