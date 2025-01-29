@@ -46,9 +46,9 @@ function szamolas() {
     osszEredmeny = koltsegInput + aramEredmeny + gazEredmeny + vizEredmeny;
     
     aramEredmeny = Math.round(aramEredmeny*100)/100;
-    gazEredmeny = Math.round(gazEredmeny);
-    vizEredmeny = Math.round(vizEredmeny);
-    osszEredmeny = Math.round(osszEredmeny);
+    gazEredmeny = Math.round(gazEredmeny*100)/100;
+    vizEredmeny = Math.round(vizEredmeny*100)/100;
+    osszEredmeny = Math.round(osszEredmeny*100)/100;
     
     document.getElementById("armanam_kiir").value = aramEredmeny;
     document.getElementById("placcs_kiir").value = vizEredmeny;
@@ -60,7 +60,7 @@ function szamolas() {
 }
 
 var input_page = "";
-var output_page = "<button id=\"gift\" onclick=\"load_input_page()\">back</button><br><br>";
+var output_page = "<button id=\"gift\" onclick=\"load_input_page()\">back</button><br>";
 
 function load_output_page() {
     input_page = document.getElementById("body").innerHTML;
@@ -80,7 +80,7 @@ function load_output_page() {
             "<td> - </td>" +
             "<td>" + aramDij + " Ft/kWh</td>" +
             "<td>" + emAramDij + " Ft/kWh (\>" + aramLimit +" kWh)</td>"+
-            "<td>" + Math.round((aramDij*Math.min(aramInput*12,aramLimit))/12) + " Ft</td>"+
+            "<td>" + Math.round((aramDij*Math.min(aramInput*12,aramLimit))/12*) + " Ft</td>"+
             "<td>" + Math.round((emAramDij*Math.max(0,aramInput*12-aramLimit))/12) + " Ft</td>"+
             "<td>" + aramEredmeny + " Ft</td>"+
         "</tr>" +
