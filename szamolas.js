@@ -80,7 +80,7 @@ function load_output_page() {
             "<td> - </td>" +
             "<td>" + aramDij + " Ft/kWh</td>" +
             "<td>" + emAramDij + " Ft/kWh (\>" + aramLimit +" kWh)</td>"+
-            "<td>" + Math.round((aramDij*Math.min(aramInput*12,aramLimit))/12*) + " Ft</td>"+
+            "<td>" + Math.round((aramDij*Math.min(aramInput*12,aramLimit))/12) + " Ft</td>"+
             "<td>" + Math.round((emAramDij*Math.max(0,aramInput*12-aramLimit))/12) + " Ft</td>"+
             "<td>" + aramEredmeny + " Ft</td>"+
         "</tr>" +
