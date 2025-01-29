@@ -81,9 +81,11 @@ table{
     
     border: 1px solid; border-collapse: collapse;padding:4px;
 }
+#zold{
+    marhgin:25px;
+}
 
 table input{
-   margin: 310px;
     width: 75%;/* background-color: aquamarine;
 
 */}
