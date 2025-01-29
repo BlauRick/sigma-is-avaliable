@@ -80,16 +80,16 @@ function load_output_page() {
             "<td> - </td>" +
             "<td>" + aramDij + " Ft/kWh</td>" +
             "<td>" + emAramDij + " Ft/kWh (\>" + aramLimit +" kWh)</td>"+
-            "<td>" + Math.round((aramDij*Math.min(aramInput*12,aramLimit))/12) + " Ft</td>"+
-            "<td>" + Math.round((emAramDij*Math.max(0,aramInput*12-aramLimit))/12) + " Ft</td>"+
+            "<td>" + Math.round((aramDij*Math.min(aramInput*12,aramLimit))/12*100)/100 + " Ft</td>"+
+            "<td>" + Math.round((emAramDij*Math.max(0,aramInput*12-aramLimit))/12*100)/100 + " Ft</td>"+
             "<td>" + aramEredmeny + " Ft</td>"+
         "</tr>" +
             "<th>Gáz</th>" +
             "<td> - </td>" +
             "<td>" + gazDij + " Ft/m³</td>" +
             "<td>" + emGazDij + " Ft/m³ (\>" + gazLimit +" m³)</td>"+
-            "<td>" + Math.round(gazDij * Math.min(gazInput, gazLimit)) + " Ft</td>"+
-            "<td>" + Math.round(emGazDij * Math.max(0, gazInput - gazLimit)) + " Ft</td>"+
+            "<td>" + Math.round(gazDij * Math.min(gazInput, gazLimit)*100)/100 + " Ft</td>"+
+            "<td>" + Math.round(emGazDij * Math.max(0, gazInput - gazLimit)*100)/100 + " Ft</td>"+
             "<td>" + gazEredmeny + " Ft</td>"+
         "</tr>" +
         "</tr>" +
@@ -97,8 +97,8 @@ function load_output_page() {
             "<td>Alapdíj: " + alVizDij + " Ft</td>" +
             "<td>" + (vizDij+csDij) + " Ft/m³</td>" +
             "<td>" + (emVizDij+csDij) + " Ft/m³ (\>" + vizLimit +" m³)</td>"+
-            "<td>" + Math.round((vizDij + csDij) * Math.min(vizInput, vizLimit)) + " Ft</td>"+
-            "<td>" + Math.round((emVizDij + csDij) * Math.max(0, vizInput - vizLimit)) + " Ft</td>"+
+            "<td>" + Math.round((vizDij + csDij) * Math.min(vizInput, vizLimit)*100)/100 + " Ft</td>"+
+            "<td>" + Math.round((emVizDij + csDij) * Math.max(0, vizInput - vizLimit)*100)/100 + " Ft</td>"+
             "<td>" + vizEredmeny + " Ft</td>"+
         "</tr>" +
     "</table><br>" + 
