@@ -8,13 +8,13 @@ const aramDij = 14.2; //áram éves
 const emAramDij = 15.08;
 const aramLimit = 1320;
 
-const aramUpper = 25000
+
 
 const gazDij = 85.06;
 const emGazDij = 650.87;
 const gazLimit = 149.91;
 
-const gazUpper = 500;
+
 
 const alVizDij = 179.95;
 const vizDij = 218.95;
@@ -22,10 +22,7 @@ const csDij = 526.4;
 const emVizDij = 504.06;
 const vizLimit = 20;
 
-const vizUpper = 500;
 
-const koltsegLower = 6000;
-const koltsegUpper = 22000;
 
 var aramInput, vizInput, gazInput, koltsegInput, aramEredmeny, vizEredmeny, gazEredmeny, osszEredmeny;
 
