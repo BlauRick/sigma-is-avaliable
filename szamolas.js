@@ -95,8 +95,8 @@ function load_output_page() {
         "</tr>" +
             "<th>Víz</th>" +
             "<td>Alapdíj: " + alVizDij + " Ft</td>" +
-            "<td>" + (vizDij-0)+(csDij-0) + " Ft/m³</td>" +
-            "<td>" + (emVizDij-0)+(csDij-0) + " Ft/m³ (\>" + vizLimit +" m³)</td>"+
+            "<td>" + (vizDij+csDij) + " Ft/m³</td>" +
+            "<td>" + (emVizDij+csDij) + " Ft/m³ (\>" + vizLimit +" m³)</td>"+
             "<td>" + Math.round((vizDij + csDij) * Math.min(vizInput, vizLimit)) + " Ft</td>"+
             "<td>" + Math.round((emVizDij + csDij) * Math.max(0, vizInput - vizLimit)) + " Ft</td>"+
             "<td>" + vizEredmeny + " Ft</td>"+
