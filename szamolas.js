@@ -45,7 +45,7 @@ function szamolas() {
 
     osszEredmeny = koltsegInput + aramEredmeny + gazEredmeny + vizEredmeny;
     
-    aramEredmeny = Math.round(aramEredmeny);
+    aramEredmeny = Math.round(aramEredmeny*100)/100;
     gazEredmeny = Math.round(gazEredmeny);
     vizEredmeny = Math.round(vizEredmeny);
     osszEredmeny = Math.round(osszEredmeny);
@@ -60,7 +60,7 @@ function szamolas() {
 }
 
 var input_page = "";
-var output_page = "<button onclick=\"load_input_page()\">back</button><br><br>";
+var output_page = "<button id=\"gift\" onclick=\"load_input_page()\">back</button><br><br>";
 
 function load_output_page() {
     input_page = document.getElementById("body").innerHTML;
