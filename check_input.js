@@ -46,7 +46,7 @@ function checkEverything() {
         document.getElementById("ossz" + "_kiir").value = "";
         err = true;
     }
-    if (isInputCorrect("placcs", 0, 20)) {
+    if (isInputCorrect("placcs", 0, 30)) {
         document.getElementById("armanam" + "_kiir").value = "";
         document.getElementById("smokey" + "_kiir").value = "";
         document.getElementById("placcs" + "_kiir").value = "";
