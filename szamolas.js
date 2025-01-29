@@ -60,7 +60,7 @@ function szamolas() {
 }
 
 var input_page = "";
-var output_page = "<button id=\"gift\" onclick=\"load_input_page()\">back</button><br>";
+var output_page = "<button id=\"gift\" onclick=\"load_input_page()\">back</button><br><br>";
 
 function load_output_page() {
     input_page = document.getElementById("body").innerHTML;
